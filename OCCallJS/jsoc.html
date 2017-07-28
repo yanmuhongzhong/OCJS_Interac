@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>test</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <script type="text/javascript">
+        var share = JSON.stringify({
+            "title": "简书",
+            "desc": "创作你的创作",
+            "shareUrl": "http://www.jianshu.com"
+        });
+        
+        var fen = JSON.stringify({
+            "title": "百度",
+            "desc": "百度你所愿"
+        });
+        
+        //IOS
+        function startFunction(share) {
+            window.androidFunction.share(share)
+            window.iOS.startFunction(share)
+        }
+    
+        function stopFunction(fen){
+            window.androidFunction.fen(fen)
+            window.iOS.stopFunction(fen)
+        }
+    
+    </script>
+</head>
+<body>
+    <br/>
+    <h1>Objective-C和JavaScript交互的那些事</h1> <br/>
+    点击调用原生代码并传递参数 <br/><br/>
+    <input type="button" value="简书" onClick="startFunction(share)"/>
+    <input type="button" value="百度" onClick="stopFunction(fen)">
+</body>
+</html>
