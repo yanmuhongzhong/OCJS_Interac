@@ -24,6 +24,10 @@
 
 @end
 
+@interface JavaOCInterRac() <JavaOCInterRacProtocol>
+
+@end
+
 @implementation JavaOCInterRac
 
 static JavaOCInterRac *JavaOCInterac = nil;

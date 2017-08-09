@@ -11,7 +11,7 @@
 @interface JavaOCInterRac : NSObject
 
 +(instancetype)getInstance;
-// 定义block，回调到控制器中；
+/** 定义block，回调到控制器中 */
 @property (nonatomic, copy) void(^showPickerBlock)();
 
 @end
