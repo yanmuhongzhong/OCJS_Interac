@@ -10,9 +10,20 @@
 #import <UIKit/UIKit.h>
 #import <JavaScriptCore/JavaScriptCore.h>
 
-@interface JavaOCInterRac() <JavaOCInterRacProtocol>
+//首先创建一个实现了JSExport协议的协议
+@protocol JavaOCInterRacProtocol <JSExport>
+
+// 调系统相册
+- (void)callPicker;
+// 调支付
+- (void)callPay;
+// 传一个参数回来
+- (void)callPassParameter: (NSString *)orderNumber;
+// 传两个参数回来
+- (void)callTestParameterone: (NSString *)orderNumber AndParametertwo:(NSString *)name;
 
 @end
+
 @implementation JavaOCInterRac
 
 static JavaOCInterRac *JavaOCInterac = nil;

@@ -44,12 +44,12 @@
     [self.view addSubview:webView];
 }
 
-#pragma mark ----- UIWebViewDelegate
+#pragma mark ----- TSWebViewDelegate
 - (void)webView:(UIWebView *)webView didCreateJavaScriptContext:(JSContext*) ctx {
     
     ctx[@"object"] = [JavaOCInterRac getInstance];
 }
-
+#pragma mark ----- UIWebViewDelegate
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     
     JavaOCInterRac *interac = [JavaOCInterRac getInstance];
